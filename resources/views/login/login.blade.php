@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Course Online</title>
+	<title>Online Course</title>
 
 	<!-- Global stylesheets --> 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -31,7 +31,13 @@
 <body>
 
 	<!-- /main navbar -->
-	<div class="navbar navbar-dark navbar-expand-md fixed-top">
+	<div class="navbar navbar-dark bg-teal-700 navbar-expand-md fixed-top">
+        <div class="navbar-brand">
+            <div class="d-inline-block">
+                <img src="{{ asset('images/logo_oc.png') }}" alt="">
+            </div>
+        </div>
+
 		<div class="d-md-none">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
 				<i class="icon-tree5"></i>
@@ -42,7 +48,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown">
 					<a href="" class="navbar-nav-link">
-						<i class="icon-cog3"></i>
+						{{-- <i class="icon-cog3"></i> --}}
 						<span class="d-md-none ml-2">Options</span>
 					</a>
 				</li>
