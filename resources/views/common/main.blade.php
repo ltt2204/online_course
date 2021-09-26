@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     @include('common.header')
-    
 </head>
 
 <body class="navbar-top">
 
 	<!-- Main navbar -->
-    @include('common.navbar')
+	@switch(Auth::user()->role)
+		@case(LOGIN_ADMIN)
+			@include('common.nav-admin')
+			@break
+		@case(LOGIN_TEACHER)
+			@include('common.nav-teacher')
+			@break
+		@case(LOGIN_STUDENT)
+			@include('common.nav-student')
+			@break
+	@endswitch
 	<!-- /main navbar -->
 
 

@@ -51,38 +51,3 @@
 
 
 @endsection
-
-@section('menubar')
-
-{{-- Thành viên --}}
-<ul class="navbar-nav">
-    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-        Thành viên
-    </a>
-    <li class="nav-item dropdown dropdown-user">
-        <div class="dropdown-menu dropdown-menu-right">
-            <a href="" class="dropdown-item"><i class="icon-user-plus"></i>Danh sách thành viên</a>
-            <a href="" class="dropdown-item"><i class="icon-switch2"></i>Danh sách giáo viên</a>
-            <div class="dropdown-divider"></div>
-            <a href="" class="dropdown-item"><i class="icon-switch2"></i>Tạo thành viên mới</a>
-        </div>
-    </li>
-</ul>
-
-{{-- Môn học --}}
-<ul class="navbar-nav">
-    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-        Môn học
-    </a>
-    <li class="nav-item dropdown dropdown-user">
-        <div class="dropdown-menu dropdown-menu-right">
-            <a href="" class="dropdown-item"><i class="icon-user-plus"></i>Danh sách môn học</a>
-            <a href="" class="dropdown-item"><i class="icon-switch2"></i>Tạo môn học mới</a>
-            <div class="dropdown-divider"></div>
-            <a href="" class="dropdown-item"><i class="icon-switch2"></i>Danh sách bài học</a>
-            <a href="" class="dropdown-item"><i class="icon-switch2"></i>Tạo bài học mới</a>
-        </div>
-    </li>
-</ul>
-
-@endsection

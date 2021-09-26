@@ -34,8 +34,41 @@
             </li>
         </ul>
 
-        @yield('menubar')
+        <ul class="navbar-nav">
+            <a  href="{{ route('admin-home') }}"
+                class="navbar-nav-link" >
+                {{-- class="navbar-nav-link d-flex"> --}}
+                <i class="icon-home4"></i>
+                <span style="text-color: white">&nbsp;&nbsp;Trang chủ</span> 
+            </a>
+        </ul>
         
+        {{-- Thành viên --}}
+        <ul class="navbar-nav">
+            <a  href="{{ route('user.index') }}"
+                class="navbar-nav-link">
+                <i class="icon-people"></i>
+                <span style="text-color: white">&nbsp;&nbsp;Thành viên</span> 
+            </a>
+        </ul>
+        
+        {{-- Môn học --}}
+        <ul class="navbar-nav">
+            <a  href=""
+                class="navbar-nav-link">
+                <i class="icon-book"></i>
+                <span style="text-color: white">&nbsp;&nbsp;Môn học</span> 
+            </a>
+        </ul>
+        
+        {{-- Học phần --}}
+        <ul class="navbar-nav">
+            <a  href=""
+                class="navbar-nav-link">
+                <i class="icon-stack"></i>
+                <span style="text-color: white">&nbsp;&nbsp;Học phần</span> 
+            </a>
+        </ul>
 
         <span class="badge bg-teal-700 ml-md-3 mr-md-auto text-shadow-light" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
@@ -49,7 +82,7 @@
                     <span>{{ $name }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a href="{{ route('users.info') }}" class="dropdown-item"><i class="icon-user-plus"></i> Thông tin cá nhân</a>
+                    <a href="{{ route('user.info') }}" class="dropdown-item"><i class="icon-user-plus"></i> Thông tin cá nhân</a>
                     <div class="dropdown-divider"></div>
                     <a href="{{ route('logout') }}" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
                 </div>
