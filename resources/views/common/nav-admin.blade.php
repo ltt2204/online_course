@@ -54,7 +54,7 @@
         
         {{-- Môn học --}}
         <ul class="navbar-nav">
-            <a  href=""
+            <a  href="{{ route('subject.index') }}"
                 class="navbar-nav-link">
                 <i class="icon-book"></i>
                 <span style="text-color: white">&nbsp;&nbsp;Môn học</span> 
@@ -63,7 +63,7 @@
         
         {{-- Học phần --}}
         <ul class="navbar-nav">
-            <a  href=""
+            <a  href="{{ route('module.index') }}"
                 class="navbar-nav-link">
                 <i class="icon-stack"></i>
                 <span style="text-color: white">&nbsp;&nbsp;Học phần</span> 

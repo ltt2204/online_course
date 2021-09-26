@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="row">
-    <div class="col-xl-6">
+    <div class="col-xl-6 mx-auto">
 
         <div class="card">
             <div class="card-header header-elements-inline">
