@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
 
 /*
@@ -86,6 +87,25 @@ Route::middleware('login_t')->group(function () {
         Route::post('store-password', [TeacherController::class, 'storePassword'])->name('store-password');
     });
 });
+
+/*
+|--------------------------------------------------------------------------
+| Courses Routes
+|--------------------------------------------------------------------------
+|*/
+Route::middleware('login_t')->group(function () {
+    Route::prefix('course')->name('course.')->group(function(){
+        Route::get('index', [CourseController::class, 'index'])->name('index');
+        Route::get('create', [CourseController::class, 'create'])->name('create');
+        Route::post('store', [CourseController::class, 'store'])->name('store');
+        Route::get('destroy/{id}', [CourseController::class, 'destroy'])->name('destroy');
+        Route::get('edit/{id}', [CourseController::class, 'edit'])->name('edit');
+        Route::post('update/{id}', [CourseController::class, 'update'])->name('update');
+        Route::get('change/{id}', [CourseController::class, 'changeStatus'])->name('change');
+    });
+});
+
+
 
 /*
 |--------------------------------------------------------------------------

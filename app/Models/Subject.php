@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Module;
+use App\Models\Course;
 use App\Traits\Uuid;
 
 class Subject extends Model
@@ -31,5 +32,13 @@ class Subject extends Model
     public function modules()
     {
         return $this->hasMany(Module::class, 'subject_id');
+    }
+
+    /**
+     * Relationship between Subject <--> Course
+     */
+    public function courses()
+    {
+        return $this->hasMany(Course::class, 'subject_id');
     }
 }

@@ -43,14 +43,20 @@
             </a>
         </ul>
         
-        {{-- Thành viên --}}
-        {{-- <ul class="navbar-nav">
-            <a  href="{{ route('user.index') }}"
-                class="navbar-nav-link">
-                <i class="icon-people"></i>
-                <span style="text-color: white">&nbsp;&nbsp;Thành viên</span> 
-            </a>
-        </ul> --}}
+        {{-- Course --}}
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown dropdown-user">
+                <a  href=""
+                    class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-books"></i>
+                    <span style="text-color: white">&nbsp;&nbsp;Lớp học</span> 
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="{{ route('course.index') }}" class="dropdown-item"><i class="icon-book"></i> Danh sách các lớp học</a>
+                    <a href="{{ route('course.create') }}" class="dropdown-item"><i class="icon-file-plus"></i>Tạo lớp học mới</a>
+                </div>
+            </li>
+        </ul>
         
         {{-- Môn học --}}
         {{-- <ul class="navbar-nav">

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Traits\Uuid;
+use App\Models\Course;
 
 class User extends Authenticatable
 {
@@ -24,4 +25,12 @@ class User extends Authenticatable
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
+
+    /**
+     * Relationship Teacher <-> Course
+     */
+    public function courses()
+    {
+        return $this->hasMany(Course::class, 'user_id');
+    }
 }
